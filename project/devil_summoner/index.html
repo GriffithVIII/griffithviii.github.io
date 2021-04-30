@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<title>Shin Megami Tensei: Devil Summoner | GriffithVIII</title>
+<title>Pokémon Conquest: NPC names | GriffithVIII</title>
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.81.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,8 +30,6 @@
     
       <a href="#translations">Translations</a>
     
-      <a href="files/CV_BenitoPalacios.pdf">CV</a>
-    
       <a href="#contact">Contact</a>
     
     </nav>
@@ -40,54 +38,54 @@
 
 <article>
   <header>
-    <h1>Shin Megami Tensei: Devil Summoner</h1>
-    <time datetime="2018-11-04T02:01:00&#43;01:00">November 04, 2018</time>
+    <h1>Pokémon Conquest: NPC names</h1>
+    <time datetime="2019-12-25T15:59:04&#43;01:00">December 25, 2019</time>
   </header>
-  <figure>
-    <img src="ke.png"/> 
-</figure>
-
-<p>As a member of the GradienWords fan-translation group, I worked in my free time
-as Localization Engineer to translate from Japanese to Spanish the game:
-<em>&ldquo;Ni no kuni: Shikkoku no Madoshi&rdquo;</em> for Nintendo DS.
-In this altruistic project we did reverse engineering in the game to translate
-all the text and images files as well as edit font files and assembly code.</p>
-<h3 id="programming">Programming</h3>
+  <h2 id="intro">Intro</h2>
+<p>Pokémon Conquest (NDS) is one of the games I would like to translate to Spanish. I have already created almost all the tools to extract, modify and insert the content. This time, I would like to focus in the story dialogs. Below is one example:</p>
+<pre><code class="language-plain">{char:0058}{speaker_color:2}{char_img:0}
+Hey, you!{wait:48}20 You're {name1}, right? {color:49}Aurora{color:51}'s new
+Warlord?
+</code></pre>
+<p>If you take a closer look you will notice we are missing something: <strong>we don&rsquo;t know the name of the character speaking</strong>. This is a very important information for translators, because otherwise they are out of context. For instance, they won&rsquo;t know the gender of the person speaking (in Spanish we have male and female version of nouns and adjetives).</p>
+<p>So let&rsquo;s try to figure out where are the names and how we can relate them to each dialog.</p>
+<h2 id="the-location-of-the-names">The location of the names</h2>
+<p>First, let&rsquo;s find out where are the names inside the game files. I will pick the name of the person speaking in the example dialog: <code>Koroku</code>. So let&rsquo;s open the game with an hexadecimal editor (I like <a href="https://mh-nexus.de/en/hxd/">HxD</a>) and search the text. The search returns that the text is located at <code>0x00185134</code>. We just need to know which game file is at that address. The easier method is to use <a href="https://github.com/pleonex/tinke/">Tinke</a>. We open the game with this program and type in the search box the magic words: <code>Offset: 00185134</code>. It will show us at this address we have the file <strong><code>BaseBushou.dat</code></strong>.</p>
+<p><img src="ke.png" alt="The hexadecimal editor and Tinke"></p>
+<p>We ran a quick test that this is indeed the file and field that we need to change by editing the name and importing back the file into the game.</p>
+<p><img src="edit1.png" alt="Game shows &lsquo;Pleonet&rsquo; instead of Koroku"></p>
+<p>Voilà. As you can see I changed in the file the name <code>Koroku</code> with <code>Pleonet</code> and now the latter is showing as the character speaking.</p>
+<h2 id="matching-the-dialog-with-the-name">Matching the dialog with the name</h2>
+<p>We know the file that contains the list of names. This is useful in case we want to change them. But we don&rsquo;t know who is speaking in the dialog yet. Let&rsquo;s check again the raw dialog text:</p>
+<pre><code class="language-plain">{char:0058}{speaker_color:2}{char_img:0}
+Hey, you!{wait:48}20 You're {name1}, right? {color:49}Aurora{color:51}'s new
+Warlord?
+</code></pre>
+<p>There are a couple of interesting metadata in that dialog. In the actual game file they have binary bytes, but after some try-and-see changes I was able to determine that:</p>
 <ul>
-<li>Create programs to convert text, image, audio and font files in easy formats
-to edit like XML, TXT, PO, PNG, WAV files.</li>
-<li>Work together with translators and graphic editors to make easier to edit
-files and tools.</li>
-<li>Edit video game source code in assembly format (ARM) to adapt occidental text
-in the screen. This includes changing: text and image positions, keyboard,
-font char spaces and increasing text limits.</li>
-<li>Create build automation programs</li>
+<li>By changing the first <code>00058</code> control code, the name of the person speaking changes. So I named it <code>char</code> from <em>character</em>.</li>
+<li>The second control code, <code>2</code> in some cases changes the color of the person speaking changes. So <code>speaker_color</code>.</li>
+<li>Finally, the third control code must be the sprite of the NPC. There are several per person to show different emotions, so I named it <code>char_img</code>.</li>
 </ul>
-<h3 id="reverse-engineering">Reverse engineering</h3>
-<ul>
-<li>Figure out file the binary format of text, script, image, font and audio files.</li>
-<li>Identify security algorithms (encryption, integrity and authentication) to
-modify DLC and save files.</li>
-</ul>
-<h2 id="game-information">Game information</h2>
-<ul>
-<li>Original title: 二ノ国 漆黒の魔導士 (Ni no Kuni: Shikkoku no Madoshi)</li>
-<li>Game release year: 2010</li>
-<li>Platform: Nintendo DS</li>
-<li>Region: Japan</li>
-<li>Genre: RPG</li>
-</ul>
-<h2 id="fan-translation-information">Fan translation information</h2>
-<ul>
-<li><a href="https://gradienwords.github.io/ninokuni/info.html">Website</a></li>
-<li><a href="https://github.com/GradienWords/Ninokuni">Source code</a></li>
-<li>Translation: Japanese to Spanish</li>
-<li>Translated game and magic book</li>
-<li>Duration: 4 years 2011 - 2015</li>
-<li>Released: v1.1 <em>15 May 2015</em></li>
-<li>Team: Jefelin (Luis Salas), Pleonex, Nino48, Lord Raptor (PaladinKnights) Momin</li>
-<li>Special thanks: Edueleno, Netty Andrew, Time Master, Ayako</li>
-</ul>
+<p>Clearly, the control code we should investigate further is the first one. Somehow the number <code>0058</code> is related to the text <code>Koroku</code>. We just need to know what kind of algorithm the game follows to get the text from the number. It&rsquo;s time to do some disassembly.</p>
+<p><img src="setup_env.png" alt="IDA Pro and DeSmuME opened"></p>
+<p>As always, the easier method is to play until the game shows the dialog. Then, we search the text in the memory and put a read-breakpoint in the control code <code>char</code> (in binary <code>1B 40</code>), so we can start following the game logic to associate the number with the name. In my case the search returned three copies of the text: <code>0x020C3B66</code>, <code>0x020C4942</code> and <code>0x02263D4E</code>. So three breakpoint since we can&rsquo;t be sure which one the game will actually process.</p>
+<p>The first one we expect to break is the third breakpoint because it contains the whole script in memory. This is probably the script file in memory. And from this location it will copy the text to another temporary places. And exactly as expected, I see that the game breaks there to copy our first control code argument <code>0058</code> into the temporary memory place (the stack): <code>0x02FE2F38</code>. One more breakpoint there.</p>
+<p>From the copy in the stack, it copies now the text into the already-known location of our second breakpoint. So we continue, and the game starts doing something more interesting as shown below:</p>
+<p><img src="convert_to_num.png" alt="Algorithm to convert string into num"></p>
+<p>This small algorithm convert the text into a number. The logic is simple: it substract each char <code>0x30</code> which is <code>0</code> in ASCII. So, <code>5</code> in ASCII is <code>0x35</code> minus <code>0x30</code> is <code>5</code>. It&rsquo;s this simple to convert a char into a number. Then it multiply the current result by 10 to move the result to the left and adds the next number.</p>
+<p>The method iterates to try to find three control codes: <code>1B 40</code>, <code>1B 73</code> and <code>1B 66</code>. In order, they correspond to my named control codes: <code>char</code>, <code>speaker_color</code> and <code>char_img</code>. We found the subrouting that parse the first three control code that each dialog usually have. If the method is able to parse and convert each argument into a number, it stores the result in three output registers. For our number of interest, the result goes to another stack address: <code>0x02FE2F94</code>. Let&rsquo;s follow now this one.</p>
+<p>The address was coming from the stack because is a variable from the caller (<code>SP + 0x14</code>). The first thing it does is to fail if the number is larger than <code>0x270F</code>. Then, it calls again the previous subroutine to parse the numbers, because why not making the game a bit slower? Hands in the next subroutine where it compares our number with <code>0x3E8</code>, gets the pointer to <code>0x022797F0</code> and go deep into the next function. The pointer seems to point to a game file, let&rsquo;s try to find it&hellip; And yes, it&rsquo;s the file <code>ScenarioBushou.dat</code>.</p>
+<p><img src="tinke_search.png" alt="Game reading file and search with HxD and Tinke"></p>
+<p>Our target argument number is actually an index. The game multiplies this number by 0x20 and reads four bytes: <code>88021264</code>. It removes bits with bitwise shifts so it gets the bits from 17 to 21, in our case just <code>1</code>. And&hellip; it does nothing with the result. 😦 😑</p>
+<p>Back to the caller, there is still one more place where it can use our number. A few lines after, it checks if the number is between 0 and 1000. If this is the case, it gets again the pointer to <code>ScenarioBushou.dat</code> and call a new function: <code>0204FB80</code>.</p>
+<p>It checks if the number is larger than <code>0xD1</code>, if that&rsquo;s the case it returns an empty string <code>\0</code>. It gets again our four bytes flag field, but this time it gets the first 9 bits: <code>64</code>. And just, before finishing this function, it gets the pointer to the file <code>BaseBushou</code> and start doing <em>things</em>.</p>
+<p>If the number from the flag field is less than <code>0xFB</code>, it multiplies the number by <code>0x14</code> and read four bytes from the file at that location (address: <code>0x7D0</code>, content: <code>00967575</code>). It gets the bits from 17 to 25 which is <code>0x4B</code>. Now, from the file position <code>0x17A0</code>, it jumps to this last number multiply by <code>0x0C</code>: <code>0x02279188</code>.</p>
+<p>Remember this address? Yes! It&rsquo;s pointing to our NPC name. Finally!</p>
+<p><img src="name_id_logic.png" alt="Assembly code with this last logic"></p>
+<h2 id="summary">Summary</h2>
+<p>This was a chaos of parsing and reading unncessary files and fields but at the end the logic is simple.
+The argument of the control code in the dialog text (<code>0058</code>) is the index to an structure with fixed length 32 bytes in <code>ScenarioBushou.dat</code>. We are interested in the first 9 bits of this structure. So we multiply <code>0058</code> by <code>0x20</code> and get the first 9 bits: <code>0x64</code>. This is the index to another structure in <code>BaseBushou.dat</code> of fixed length 20 bytes. We multiply this second index by <code>0x14</code> and get the name index by reading the bits 17-25: <code>0x4B</code>. The name will be starting at <code>0x17A0</code> multiplying the name index by the name lengths (<code>0x0C</code>).</p>
 
 </article>
 
