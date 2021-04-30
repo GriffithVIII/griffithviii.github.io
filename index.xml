@@ -17,21 +17,12 @@
     </item>
     
     <item>
-      <title>Pokémon Conquest: NPC names</title>
-      <link>/project/devil_summoner/</link>
-      <pubDate>Wed, 25 Dec 2019 15:59:04 +0100</pubDate>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/project/devil_summoner/</guid>
-      <description>Research in the game Pokémon Conquest from NDS to get the location of the NPC names and the relationship with each dialog box.</description>
-    </item>
-    
-    <item>
-      <title>Yarhl</title>
-      <link>/project/yarhl/</link>
-      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
-      
-      <guid>/project/yarhl/</guid>
-      <description>&lt;em&gt;Yet Another ROM Hacking Library (Yarhl)&lt;/em&gt; is a quality-focused library for file format converters.</description>
+      <guid>/projects/</guid>
+      <description></description>
     </item>
     
   </channel>
