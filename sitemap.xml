@@ -3,31 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2019-12-25T15:59:04+01:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2019-12-25T15:59:04+01:00</lastmod>
-  </url><url>
-    <loc>/tags/reverse-engineering/</loc>
-    <lastmod>2019-12-25T15:59:04+01:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2019-12-25T15:59:04+01:00</lastmod>
-  </url><url>
-    <loc>/post/pokconq-names/</loc>
-    <lastmod>2019-12-25T15:59:04+01:00</lastmod>
-  </url><url>
-    <loc>/projects/</loc>
-    <lastmod>2018-11-04T02:01:00+01:00</lastmod>
-  </url><url>
-    <loc>/projects/yarhl-copia/</loc>
-    <lastmod>2018-11-04T02:01:00+01:00</lastmod>
-  </url><url>
-    <loc>/projects/yarhl/</loc>
-    <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    <priority>0</priority>
   </url><url>
     <loc>/categories/</loc>
   </url><url>
-    <loc>/projects/devil_summoner/</loc>
+    <loc>/</loc>
+  </url><url>
+    <loc>/tags/</loc>
   </url>
 </urlset>
