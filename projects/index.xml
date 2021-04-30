@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GriffithVIII</title>
-    <link>/authors/admin/</link>
-    <description>Recent content on GriffithVIII</description>
+    <title>Projects on GriffithVIII</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on GriffithVIII</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Dec 2019 15:59:04 +0100</lastBuildDate><atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>w</title>
-      <link>/post/pokconq-names/</link>
-      <pubDate>Wed, 25 Dec 2019 15:59:04 +0100</pubDate>
-      
-      <guid>/post/pokconq-names/</guid>
-      <description>Research in the game Pokémon Conquest from NDS to get the location of the NPC names and the relationship with each dialog box.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yarhl</title>
       <link>/projects/yarhl-copia/</link>
