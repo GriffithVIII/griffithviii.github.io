@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Dec 2019 15:59:04 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Pokémon Conquest: NPC names</title>
+      <title>AAAA</title>
       <link>/post/pokconq-names/</link>
       <pubDate>Wed, 25 Dec 2019 15:59:04 +0100</pubDate>
       
@@ -23,6 +23,15 @@
       
       <guid>/project/devil_summoner/</guid>
       <description>Research in the game Pokémon Conquest from NDS to get the location of the NPC names and the relationship with each dialog box.</description>
+    </item>
+    
+    <item>
+      <title>Yarhl</title>
+      <link>/project/yarhl/</link>
+      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
+      
+      <guid>/project/yarhl/</guid>
+      <description>&lt;em&gt;Yet Another ROM Hacking Library (Yarhl)&lt;/em&gt; is a quality-focused library for file format converters.</description>
     </item>
     
   </channel>
