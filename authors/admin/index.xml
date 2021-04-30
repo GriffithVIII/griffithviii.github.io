@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GriffithVIII</title>
-    <link>/</link>
+    <link>/authors/admin/</link>
     <description>Recent content on GriffithVIII</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Dec 2019 15:59:04 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Dec 2019 15:59:04 +0100</lastBuildDate><atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pokémon Conquest: NPC names</title>
       <link>/post/pokconq-names/</link>

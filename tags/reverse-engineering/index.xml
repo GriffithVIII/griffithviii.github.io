@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GriffithVIII</title>
-    <link>/</link>
-    <description>Recent content on GriffithVIII</description>
+    <title>reverse-engineering on GriffithVIII</title>
+    <link>/tags/reverse-engineering/</link>
+    <description>Recent content in reverse-engineering on GriffithVIII</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Dec 2019 15:59:04 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Dec 2019 15:59:04 +0100</lastBuildDate><atom:link href="/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pokémon Conquest: NPC names</title>
       <link>/post/pokconq-names/</link>
