@@ -10,8 +10,8 @@
 <link rel="alternate" type="application/rss+xml" href="" title="GriffithVIII">
 
   <style>
-    body {
-    }
+    
+    
     #container {
         width:800px;
         text-align:justify;
@@ -26,8 +26,9 @@
  
 <header>
   
+
     <a href="" class="title">GriffithVIII</a>
-  
+
   
     <nav>
     
@@ -43,7 +44,7 @@
 
 <article>
   <header>
-    <h1><p><strong>«If I can learn, even a little, I&rsquo;m interested».</strong></p></h1>
+    <h1 style="font-size: 40px"><p><strong>«If I can learn, even a little, I&rsquo;m interested».</strong></p></h1>
   </header>
 <p>I&rsquo;m Adolfo Loewenthal, also known as <em>«GriffithVIII»</em> on the internet.
 A self-taught person, my bases are <strong>C#</strong> and <strong>MIPS</strong>,
@@ -53,34 +54,61 @@ a non-profit community of fantranslators, where I have collaborated and learned 
 
 </article>
 
- <h1>Projects:</h1>
-  
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
+}
+
+.iconDetails {
+ margin-left:2%;
+float:left; 
+height:40px;
+width:40px;	
+} 
+
+.container2 {
+	width:100%;
+	height:auto;
+	padding:1%;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
   div.desc {
-  padding: 15px;
-  text-align: center;
-}
-}
+    padding: 15px;
+    text-align: justify;
+  }
 
 /* The grid: Four equal columns that floats next to each other */
 .column {
-  float: left;
-  width: 25%;
-  padding: 10px;
+  margin:0%;
+  float:inline-end; 
+  width: 100%;
 }
 
 /* Style the images inside the grid */
 .column img {
-  opacity: 0.8; 
   cursor: pointer; 
 }
 
 .column img:hover {
-  opacity: 1;
+  opacity: 0.8; 
 }
 
 /* Clear floats after the columns */
@@ -90,56 +118,81 @@ a non-profit community of fantranslators, where I have collaborated and learned 
   clear: both;
 }
 
-/* The expanding image container */
-.container {
+.cs-item {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent),             
+              url(https://www.upload.ee/image/7272952/case-studies-item.png);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  display: inline-block;
+  font-family: "Proxima Nova";
+  margin: 15px 12px;
   position: relative;
-  display: none;
+  height: 255px;
+  width: 430px;
 }
 
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
+h2 {
+  margin-left: 6px;
+  font-size: 40px;
 }
 
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
 </style>
 </head>
 <body>
 
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
-</div>
+  <div style="text-align:center">
+    <h1>Recent:</h1>
+   </div>
 
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="/projects/devil_summoner/ke.png" alt="Snow" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="img_mountains.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="img_lights.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="desc">Add a description of the image here</div>
-</div>
-</div>
+<div class="row" style="
+  margin: 15%; 
+  margin-top: 0px;
+  margin-bottom: 20px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  border:5px solid rgb(59, 57, 57);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, transparent 70%),
+    url('/projects/devil_summoner/devilsummoner.png');
+  background-size: cover;">
+  <div style='float:left;color: #ffffff;
+  padding-top: 20%;'class="column"
+  >
+  
+  <h2>Shin Megami Tensei: Devil Summoner</h2>
+  <p style="margin-top: -30px; margin-left: 6px;">
+  Game fan-translation, for the PSP version of the game (only Japan).
+    <ul>
+      <li>Reverse engineering.</li>
+      <li>Dissasembly.</li>
+      <li>Programming.</li>
+      <li>Graphic editing.</li>
+    </ul>
+  </p>
+      </div>
+    </div>
+ 
+    <div class="row" style="
+    margin: 15%; 
+    margin-top: 0px;
+    margin-bottom: 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    border:5px solid rgb(59, 57, 57);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, transparent 70%),
+      url('/projects/boku_natsuyasumi/boku.jpg');
+    background-size: cover;">
+    <div style='float:left;color: #ffffff;
+    padding-top: 20%;'class="column"
+    >
+    
+    <h2>Boku no Natsuyasumi</h2>
+    <p style="margin-top: -30px; margin-left: 6px;">
+    Game fan-translation, for the PSP version of the game (only Japan).
+      <ul>
+        <li>Reverse engineering.</li>
+        <li>Dissasembly.</li>
+        <li>Programming.</li>
+      </ul>
+    </p>
+        </div>
+      </div>
 
 <div class="container">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -159,7 +212,29 @@ function myFunction(imgs) {
 
 </body>
 
-
-</body>
+<head>
+  <style>
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  </style>
+  </head>
 
 </html>
