@@ -25,26 +25,36 @@
 </style>
  
 <header>
-  
-
-    <a href="" class="title">GriffithVIII</a>
-
-  
-    <nav>
     
-      <a href="/">Home</a>
-      
-      <a href="/about/">About</a>
+    <div style="font-size: 20px;font-weight:bold;">
+        <a href="/" class="title">GriffithVIII</a>
+    </div>
     
-      <a href="/projects/">Projects</a>
-      
-    </nav>
-  
+      <div style = "margin: -100px;" class ="topnavlogo">
+        <a href = "https://github.com/GriffithVIII";>
+          <img src=/icons/github/GitHub-Mark-64px.png>
+        </a>
+        <a href="https://twitter.com/GriffithVIII";>
+          <img style="width: 70px;opacity: 0.6;"src=/icons/twitter/black.png>
+          </a>
+      </div>
+
+   <div class ="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+   </div>
+
 </header>
 
+
+
 <article>
+  <div style="border:4px solid rgb(59, 57, 57);
+  
+  ">
   <header>
-    <h1 style="font-size: 40px"><p><strong>«If I can learn, even a little, I&rsquo;m interested».</strong></p></h1>
+    <h1 style="font-size: 40px;background-color:  #272627;width: 65%;"><p><strong>«If I can learn, even a little, I&rsquo;m interested».</strong></p></h1>
   </header>
 <p>I&rsquo;m Adolfo Loewenthal, also known as <em>«GriffithVIII»</em> on the internet.
 A self-taught person, my bases are <strong>C#</strong> and <strong>MIPS</strong>,
@@ -53,7 +63,7 @@ languages I learned by experimenting on projects involving reverse engineering.<
 a non-profit community of fantranslators, where I have collaborated and learned in programming, reverse engineering and graphic editing.</p>
 
 </article>
-
+</div>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -61,79 +71,7 @@ a non-profit community of fantranslators, where I have collaborated and learned 
   box-sizing: border-box;
 }
 
-.iconDetails {
- margin-left:2%;
-float:left; 
-height:40px;
-width:40px;	
-} 
 
-.container2 {
-	width:100%;
-	height:auto;
-	padding:1%;
-}
-
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: justify;
-  }
-
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  margin:0%;
-  float:inline-end; 
-  width: 100%;
-}
-
-/* Style the images inside the grid */
-.column img {
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 0.8; 
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.cs-item {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent),             
-              url(https://www.upload.ee/image/7272952/case-studies-item.png);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-  display: inline-block;
-  font-family: "Proxima Nova";
-  margin: 15px 12px;
-  position: relative;
-  height: 255px;
-  width: 430px;
-}
-
-h2 {
-  margin-left: 6px;
-  font-size: 40px;
-}
 
 </style>
 </head>
@@ -143,8 +81,9 @@ h2 {
     <h1>Recent:</h1>
    </div>
 
-<div class="row" style="
-  margin: 15%; 
+   
+  <div class="row"style="
+  margin: 20%; 
   margin-top: 0px;
   margin-bottom: 20px;
   box-shadow: 0 20px 30px rgba(0,0,0,0.2);
@@ -152,13 +91,20 @@ h2 {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, transparent 70%),
     url('/projects/devil_summoner/devilsummoner.png');
   background-size: cover;">
-  <div style='float:left;color: #ffffff;
-  padding-top: 20%;'class="column"
-  >
+
+<a href="/projects/devil_summoner/">
+<div class="link">
+
   
+      </div>
+      <div style='float:left;color: #ffffff;
+  padding-top: 12%;'class="column"
+  >
+
   <h2>Shin Megami Tensei: Devil Summoner</h2>
   <p style="margin-top: -30px; margin-left: 6px;">
   Game fan-translation, for the PSP version of the game (only Japan).
+  
     <ul>
       <li>Reverse engineering.</li>
       <li>Dissasembly.</li>
@@ -166,11 +112,11 @@ h2 {
       <li>Graphic editing.</li>
     </ul>
   </p>
-      </div>
     </div>
- 
+  </a>
+  </div>
     <div class="row" style="
-    margin: 15%; 
+    margin: 20%; 
     margin-top: 0px;
     margin-bottom: 20px;
     box-shadow: 0 20px 30px rgba(0,0,0,0.2);
@@ -179,7 +125,7 @@ h2 {
       url('/projects/boku_natsuyasumi/boku.jpg');
     background-size: cover;">
     <div style='float:left;color: #ffffff;
-    padding-top: 20%;'class="column"
+    padding-top: 15%;'class="column"
     >
     
     <h2>Boku no Natsuyasumi</h2>
@@ -194,11 +140,7 @@ h2 {
         </div>
       </div>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:100%">
-  <div id="imgtext"></div>
-</div>
+
 
 <script>
 function myFunction(imgs) {
@@ -211,30 +153,5 @@ function myFunction(imgs) {
 </script>
 
 </body>
-
-<head>
-  <style>
-  div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
-  </style>
-  </head>
 
 </html>

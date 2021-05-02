@@ -9,48 +9,116 @@
 <link rel="canonical" href="/projects/">
 <link rel="alternate" type="application/rss+xml" href="/projects/index.xml" title="GriffithVIII">
 
+<style>
+    
+    
+  #container {
+      width:800px;
+      text-align:justify;
+      margin-left:auto;
+      margin-right:auto;
+  }
+  #force {
+      width:100%;
+      height:0px;
+  }
+</style>
+
 <header>
-  
-    <a href="" class="title">GriffithVIII</a>
-  
-  
-    <nav>
     
+  <div style="font-size: 20px;font-weight:bold;">
+      <a href="/" class="title">GriffithVIII</a>
+  </div>
+
+ <div class ="topnav">
+      <a href="/">Home</a>
       <a href="/about/">About</a>
-    
-      <a href="/projects/">Projects</a>
-    
-    </nav>
-  
+      <a class="active" href="/projects/">Projects</a>
+ </div>
+
 </header>
 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;
+}
 
+</style>
+</head>
+<body>
 
+  <div style="text-align:center">
+    <h1>Recent:</h1>
+   </div>
 
-
-
-
-<article>
-  <header><h1>Projects</h1></header>
-  <ul class="archive">
-    <li>
-      <time datetime="2018-11-04T02:01:00&#43;01:00">2018-11-04</time>
-      <a href="/projects/yarhl-copia/">Yarhl</a>
-    </li>
-    <li>
-      <time datetime="2018-11-04T02:01:00&#43;01:00">2018-11-04</time>
-      <a href="/projects/yarhl/">Yarhl</a>
-    </li>
-    <li>
-      
-      <a href="/projects/devil_summoner/">Shin Megami Tensei: Devil Summoner</a>
-    </li>
-  </ul>
+<div class="row" style="
+  margin: 20%; 
+  margin-top: 0px;
+  margin-bottom: 20px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  border:5px solid rgb(59, 57, 57);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, transparent 70%),
+    url('/projects/devil_summoner/devilsummoner.png');
+  background-size: cover;">
   
-</article>
+  <div style='float:left;color: #ffffff;
+  padding-top: 12%;'class="column"
+  >
+  
+  <h2>Shin Megami Tensei: Devil Summoner</h2>
+  <p style="margin-top: -30px; margin-left: 6px;">
+  Game fan-translation, for the PSP version of the game (only Japan).
+  
+    <ul>
+      <li>Reverse engineering.</li>
+      <li>Dissasembly.</li>
+      <li>Programming.</li>
+      <li>Graphic editing.</li>
+    </ul>
+  </p>
+      </div>
+    </div>
+ 
+    <div class="row" style="
+    margin: 20%; 
+    margin-top: 0px;
+    margin-bottom: 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    border:5px solid rgb(59, 57, 57);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, transparent 70%),
+      url('/projects/boku_natsuyasumi/boku.jpg');
+    background-size: cover;">
+    <div style='float:left;color: #ffffff;
+    padding-top: 15%;'class="column"
+    >
+    
+    <h2>Boku no Natsuyasumi</h2>
+    <p style="margin-top: -30px; margin-left: 6px;">
+    Game fan-translation, for the PSP version of the game (only Japan).
+      <ul>
+        <li>Reverse engineering.</li>
+        <li>Dissasembly.</li>
+        <li>Programming.</li>
+      </ul>
+    </p>
+        </div>
+      </div>
 
 
 
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
 
 
 </html>
